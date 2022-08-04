@@ -2,7 +2,7 @@
 
 !GroundPoundPatch	= 1		;>0 = if you haven't installed it, 1 otherwise.
 
- !Freeram_GroundPownFlg	= $1E00|!Base2
+ !Freeram_GroundPownFlg	= $1E00|!addr
  ;^GroundPound's flag for determining if player is ground pounding. This is basically
  ;fixed_ground_pound's "!Freeram" (without any character added to it), do not use the
  ;other freeram.
@@ -24,9 +24,9 @@ TopCorner:
 		BEQ Ret		;/
 	endif
 	if !GroundPoundPatch == 0
-		LDA $140D|!Base2
+		LDA $140D|!addr
 		BEQ Ret
-		STZ $140D|!Base2		;>Stop spinjumping
+		STZ $140D|!addr		;>Stop spinjumping
 	else
 		LDA !Freeram_GroundPownFlg	;\Don't pound down if not ground pound.
 		BEQ Ret				;/
