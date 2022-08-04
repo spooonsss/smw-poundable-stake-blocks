@@ -18,8 +18,7 @@ Instructions:
 
  2) ASM:
 
-  2.1) copy-paste the text from "list.txt" to GPS's list. copy-paste the blocks into GPS's blocks, and all the asm
-  files in routines into GPS's routines folder.
+  2.1) copy-paste the text from "list.txt" to GPS's list. copy-paste the blocks into GPS's blocks
 
   2.2) Make any !Defines changes needed in the blocks:
 
