@@ -38,7 +38,7 @@ TopCorner:
 	ADC #$0010		;|
 	STA $98			;/
 	SEP #$20		;
-	%GetBlock()		;>Routine that reads the map16 number
+	%get_map16()		;>Routine that reads the map16 number
 	STA $00			;\Write so that the 16-bit can read properly
 	STY $01			;/
 	REP #$20
@@ -61,7 +61,7 @@ OneTileDown:
 	STA $98			;|
 	SEP #$20		;/
 	%erase_block()		;>Turn upper head block into blank...
-	%InvertXYBlkPos()
+	%swap_XY()
 	REP #$20		;\...While the tile below it...
 	LDA $98			;|
 	CLC			;|
